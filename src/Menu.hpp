@@ -33,6 +33,11 @@ public:
     static NovaMenuPopup* create();
     bool setup() override;
 
+    // Compatibility wrapper for the older Geode Popup API used by Menu.cpp.
+    bool initAnchored(float width, float height, char const* background = "GJ_square01.png") {
+        return init(width, height, background);
+    }
+
     void onClose(CCObject* sender) override;
     void keyBackClicked() override;
     void onTab(CCObject* sender);
