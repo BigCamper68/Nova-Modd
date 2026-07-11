@@ -1,9 +1,11 @@
 #pragma once
 
 #include <Geode/Geode.hpp>
-#include <Geode/ui/Popup.hpp>
+#include <Geode/ui/GeodeUI.hpp>
 
+#include <functional>
 #include <string>
+#include <vector>
 
 using namespace geode::prelude;
 
@@ -19,33 +21,37 @@ enum class MenuTab {
     Profiles
 };
 
-class NovaMenuPopup : public geode::Popup<> {
-protected:
-    bool setup() override;
+struct MenuEntry {
+    std::string label;
+    std::string key;
+    bool defaultValue = false;
+    int action = 0;
+};
 
+class NovaMenuPopup final : public Popup<> {
 public:
     static NovaMenuPopup* create();
+    bool setup() override;
+
+    void onClose(CCObject* sender) override;
+    void keyBackClicked() override;
+    void onTab(CCObject* sender);
+    void onEntry(CCObject* sender);
 
 private:
     void rebuild();
-    void buildSidebar();
-    void buildContent();
-    void addTitle(std::string const& title, std::string const& subtitle = "");
-    void addToggle(std::string const& title, std::string const& key, bool defaultValue = false);
-    void addAction(std::string const& title, std::string const& action, int color = 1);
-    void addInfo(std::string const& text);
-    void addTab(std::string const& title, MenuTab tab);
-    void applyProfile(std::string const& profile);
-    void executeAction(std::string const& action);
-
-    void onTab(CCObject* sender);
-    void onToggle(CCObject* sender);
-    void onAction(CCObject* sender);
+    void updateStatus();
+    std::vector<MenuEntry> entriesForTab(MenuTab tab) const;
+    void performAction(int action);
+    void applyProfile(int profile);
+    void resetFeatures();
 
     MenuTab m_tab = MenuTab::Home;
-    CCNode* m_content = nullptr;
-    CCMenu* m_sidebar = nullptr;
-    float m_cursorY = 0.f;
+    CCNode* m_contentRoot = nullptr;
+    CCMenu* m_contentMenu = nullptr;
+    CCLabelBMFont* m_tabTitle = nullptr;
+    CCLabelBMFont* m_status = nullptr;
+    std::vector<MenuEntry> m_entries;
 };
 
 void openNovaMenu();
