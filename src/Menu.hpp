@@ -31,11 +31,13 @@ struct MenuEntry {
 class NovaMenuPopup final : public geode::Popup {
 public:
     static NovaMenuPopup* create();
-    bool setup() override;
+    bool setup();
 
-    // Compatibility wrapper for the older Geode Popup API used by Menu.cpp.
+    // Geode v5 removed Popup::initAnchored and setup(). This wrapper keeps the
+    // existing Menu.cpp layout code while using the new Popup::init API.
     bool initAnchored(float width, float height, char const* background = "GJ_square01.png") {
-        return init(width, height, background);
+        if (!geode::Popup::init(width, height, background)) return false;
+        return setup();
     }
 
     void onClose(CCObject* sender) override;
