@@ -28,7 +28,7 @@ struct MenuEntry {
     int action = 0;
 };
 
-class NovaMenuPopup final : public geode::Popup<> {
+class NovaMenuPopup final : public geode::Popup {
 public:
     static NovaMenuPopup* create();
     bool setup() override;
