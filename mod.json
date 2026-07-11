@@ -1,0 +1,43 @@
+{
+    "geode": "v5.8.1",
+    "gd": {
+        "win": "2.2081",
+        "android": "2.2081",
+        "mac": "2.2081",
+        "ios": "2.2081"
+    },
+    "id": "george.nova-menu",
+    "name": "Nova Menu",
+    "version": "v0.1.0",
+    "developer": "George Sanchez",
+    "description": "An extensible Geometry Dash utility menu with HUD tools, practice helpers, profiles, and a safe practice-only macro recorder.",
+    "tags": [
+        "utility",
+        "interface",
+        "offline",
+        "gameplay"
+    ],
+    "dependencies": {
+        "geode.node-ids": ">=v1.23.3"
+    },
+    "settings": {
+        "show-main-menu-button": {
+            "type": "bool",
+            "name": "Show main-menu button",
+            "description": "Adds a Nova Menu button to the Geometry Dash main menu.",
+            "default": true
+        },
+        "show-pause-button": {
+            "type": "bool",
+            "name": "Show pause-menu button",
+            "description": "Adds a Nova Menu button to the pause screen.",
+            "default": true
+        },
+        "enable-f2-keybind": {
+            "type": "bool",
+            "name": "Enable F2 keybind",
+            "description": "Press F2 to open Nova Menu on desktop platforms.",
+            "default": true
+        }
+    }
+}
