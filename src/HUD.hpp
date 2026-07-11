@@ -6,18 +6,17 @@ using namespace geode::prelude;
 
 namespace nova {
 
-class NovaHUD : public CCNode {
+class NovaHUD final : public CCNode {
 public:
-    static NovaHUD* create(PlayLayer* owner);
-
-    bool init(PlayLayer* owner);
-    void updateHUD(float dt);
+    static NovaHUD* create(PlayLayer* layer);
+    bool init(PlayLayer* layer);
+    void update(float dt) override;
 
 private:
-    PlayLayer* m_owner = nullptr;
+    PlayLayer* m_layer = nullptr;
     CCLabelBMFont* m_label = nullptr;
     CCScale9Sprite* m_background = nullptr;
-    float m_accumulator = 0.f;
+    float m_smoothedFPS = 60.f;
 };
 
 } // namespace nova
