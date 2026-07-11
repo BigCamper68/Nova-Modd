@@ -71,13 +71,137 @@ This warning is for project developers.  Use -Wno-dev to suppress it.
 './Codegen' 'Android64' '/home/runner/work/Nova-Modd/Nova-Modd/build/_deps/bindings-src/bindings/2.2081' '/home/runner/work/Nova-Modd/Nova-Modd/build/bindings/bindings'
 
 -- Setting up NovaMenu
-CMake Error at geode-sdk-clone/cmake/GeodeFile.cmake:100 (message):
-  Mod george.nova-menu is made for Geode version v5.8.1 but you have 5.8.1
-  SDK installed.  Please change the Geode version in your mod.json.
-Call Stack (most recent call first):
-  CMakeLists.txt:26 (setup_geode_mod)
-
-
--- Configuring incomplete, errors occurred!
-CONFIGURE_EXIT=1
+-- Mod george.nova-menu is compiling for Geode version 5.8.1
+-- Mod george.nova-menu is compiling for Geometry Dash version 2.2081
+| Info | Fetching dependency from index
+| Info | Dependency found: geode.node-ids, version 1.23.3
+| Info | Downloading dependency
+| Info | Success
+| Info | Writing dependency to temp file
+| Info | Dependency 'geode.node-ids' found on the index, installing (version '1.23.3')
+| Done | All dependencies resolved
+-- Skipping installing NovaMenu
+-- Configuring done (25.7s)
+-- Generating done (0.2s)
+-- Build files have been written to: /home/runner/work/Nova-Modd/Nova-Modd/build
+CONFIGURE_EXIT=0
+=== CMAKE BUILD ===
+[0/2] Re-checking globbed directories...
+[1/34] Building CXX object _deps/fmt-build/CMakeFiles/fmt.dir/src/os.cc.o
+[2/34] Building CXX object _deps/fmt-build/CMakeFiles/fmt.dir/src/format.cc.o
+[3/34] Linking CXX static library _deps/fmt-build/libfmt.a
+[4/34] Building CXX object _deps/asp2-build/CMakeFiles/asp.dir/Unity/unity_0_cxx.cxx.o
+[5/34] Linking CXX static library _deps/asp2-build/libasp.a
+[6/34] Building CXX object _deps/arc-build/CMakeFiles/arc.dir/Unity/unity_0_cxx.cxx.o
+[7/34] Linking CXX static library _deps/arc-build/libarc.a
+[8/34] Running Codegen
+[9/34] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_14_cxx.cxx.o
+[10/34] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_12_cxx.cxx.o
+[11/34] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_13_cxx.cxx.o
+[12/34] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_11_cxx.cxx.o
+[13/34] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_10_cxx.cxx.o
+[14/34] Building CXX object CMakeFiles/NovaMenu.dir/cmake_pch.hxx.pch
+[15/34] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_8_cxx.cxx.o
+[16/34] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_9_cxx.cxx.o
+[17/34] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_6_cxx.cxx.o
+[18/34] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_7_cxx.cxx.o
+[19/34] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_5_cxx.cxx.o
+[20/34] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_4_cxx.cxx.o
+[21/34] Building CXX object CMakeFiles/NovaMenu.dir/src/Core.cpp.o
+[22/34] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_2_cxx.cxx.o
+[23/34] Building CXX object CMakeFiles/NovaMenu.dir/src/HUD.cpp.o
+[24/34] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_0_cxx.cxx.o
+[25/34] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_3_cxx.cxx.o
+[26/34] Building CXX object CMakeFiles/NovaMenu.dir/src/Menu.cpp.o
+FAILED: [code=1] CMakeFiles/NovaMenu.dir/src/Menu.cpp.o 
+/usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android23 --sysroot=/usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DARC_FEATURE_TIME=1 -DGEODE_COMP_GD_VERSION=22081 -DGEODE_GD_VERSION=2.2081 -DGEODE_GD_VERSION_STRING=\"2.2081\" -DGEODE_MOD_ID=\"george.nova-menu\" -DMAT_JSON_DYNAMIC=1 -DNovaMenu_EXPORTS -DPROJECT_NAME=NovaMenu -I/home/runner/work/Nova-Modd/Nova-Modd/build/geode-deps -I/home/runner/work/Nova-Modd/Nova-Modd/geode-sdk-clone/loader/include -I/home/runner/work/Nova-Modd/Nova-Modd/geode-sdk-clone/loader/include/Geode/cocos/include -I/home/runner/work/Nova-Modd/Nova-Modd/geode-sdk-clone/loader/include/Geode/cocos/extensions -I/home/runner/work/Nova-Modd/Nova-Modd/geode-sdk-clone/loader/include/Geode/fmod -isystem /home/runner/work/Nova-Modd/Nova-Modd/build/bindings/bindings -isystem /home/runner/work/Nova-Modd/Nova-Modd/build/_deps/bindings-src/bindings/include -isystem /home/runner/work/Nova-Modd/Nova-Modd/build/_deps/fmt-src/include -isystem /home/runner/work/Nova-Modd/Nova-Modd/build/_deps/tuliphook-src/include -isystem /home/runner/work/Nova-Modd/Nova-Modd/build/_deps/result-src/include -isystem /home/runner/work/Nova-Modd/Nova-Modd/build/_deps/json-src/include -isystem /home/runner/work/Nova-Modd/Nova-Modd/build/_deps/nontype_functional-src/include -isystem /home/runner/work/Nova-Modd/Nova-Modd/build/_deps/asp2-src/include -isystem /home/runner/work/Nova-Modd/Nova-Modd/build/_deps/arc-src/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O3 -DNDEBUG  -std=gnu++23 -flto=thin -fPIC -fvisibility=hidden -Werror=return-type -ffunction-sections -fdata-sections -Winvalid-pch -Xclang -include-pch -Xclang /home/runner/work/Nova-Modd/Nova-Modd/build/CMakeFiles/NovaMenu.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/runner/work/Nova-Modd/Nova-Modd/build/CMakeFiles/NovaMenu.dir/cmake_pch.hxx -MD -MT CMakeFiles/NovaMenu.dir/src/Menu.cpp.o -MF CMakeFiles/NovaMenu.dir/src/Menu.cpp.o.d -o CMakeFiles/NovaMenu.dir/src/Menu.cpp.o -c /home/runner/work/Nova-Modd/Nova-Modd/src/Menu.cpp
+In file included from /home/runner/work/Nova-Modd/Nova-Modd/src/Menu.cpp:1:
+/home/runner/work/Nova-Modd/Nova-Modd/src/Menu.hpp:31:36: error: unknown template name 'Popup'
+   31 | class NovaMenuPopup final : public Popup<> {
+      |                                    ^
+/home/runner/work/Nova-Modd/Nova-Modd/src/Menu.hpp:34:18: error: only virtual member functions can be marked 'override'
+   34 |     bool setup() override;
+      |                  ^~~~~~~~
+/home/runner/work/Nova-Modd/Nova-Modd/src/Menu.hpp:36:36: error: only virtual member functions can be marked 'override'
+   36 |     void onClose(CCObject* sender) override;
+      |                                    ^~~~~~~~
+/home/runner/work/Nova-Modd/Nova-Modd/src/Menu.hpp:37:27: error: only virtual member functions can be marked 'override'
+   37 |     void keyBackClicked() override;
+      |                           ^~~~~~~~
+/home/runner/work/Nova-Modd/Nova-Modd/src/Menu.cpp:68:21: error: no member named 'initAnchored' in 'nova::NovaMenuPopup'
+   68 |     if (ret && ret->initAnchored(470.f, 285.f, "GJ_square01.png")) {
+      |                ~~~  ^
+/home/runner/work/Nova-Modd/Nova-Modd/src/Menu.cpp:69:14: error: no member named 'autorelease' in 'nova::NovaMenuPopup'
+   69 |         ret->autorelease();
+      |         ~~~  ^
+/home/runner/work/Nova-Modd/Nova-Modd/src/Menu.cpp:77:5: error: use of undeclared identifier 'setKeypadEnabled'
+   77 |     setKeypadEnabled(true);
+      |     ^
+/home/runner/work/Nova-Modd/Nova-Modd/src/Menu.cpp:81:5: error: use of undeclared identifier 'm_mainLayer'
+   81 |     m_mainLayer->addChildAtPosition(title, Anchor::Top, {0.f, -18.f});
+      |     ^
+/home/runner/work/Nova-Modd/Nova-Modd/src/Menu.cpp:95:23: error: no matching function for call to 'create'
+   95 |         auto button = CCMenuItemSpriteExtra::create(
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/Nova-Modd/Nova-Modd/build/bindings/bindings/Geode/binding/CCMenuItemSpriteExtra.hpp:33:35: note: candidate function not viable: no known conversion from 'nova::NovaMenuPopup *' to 'cocos2d::CCObject *' for 2nd argument
+   33 |     static CCMenuItemSpriteExtra* create(cocos2d::CCNode* sprite, cocos2d::CCObject* target, cocos2d::SEL_MenuHandler callback);
+      |                                   ^                               ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/Nova-Modd/Nova-Modd/build/bindings/bindings/Geode/binding/CCMenuItemSpriteExtra.hpp:42:35: note: candidate function not viable: requires 4 arguments, but 3 were provided
+   42 |     static CCMenuItemSpriteExtra* create(cocos2d::CCNode* sprite, cocos2d::CCNode* selectedSprite, cocos2d::CCObject* target, cocos2d::SEL_MenuHandler callback);
+      |                                   ^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/Nova-Modd/Nova-Modd/src/Menu.cpp:104:5: error: use of undeclared identifier 'm_mainLayer'
+  104 |     m_mainLayer->addChildAtPosition(tabs, Anchor::Left, {62.f, -5.f});
+      |     ^
+/home/runner/work/Nova-Modd/Nova-Modd/src/Menu.cpp:108:5: error: use of undeclared identifier 'm_mainLayer'
+  108 |     m_mainLayer->addChildAtPosition(m_contentRoot, Anchor::Center, {63.f, -5.f});
+      |     ^
+/home/runner/work/Nova-Modd/Nova-Modd/src/Menu.cpp:132:5: error: use of undeclared identifier 'removeFromParentAndCleanup'
+  132 |     removeFromParentAndCleanup(true);
+      |     ^
+/home/runner/work/Nova-Modd/Nova-Modd/src/Menu.cpp:217:23: error: no matching function for call to 'create'
+  217 |         auto button = CCMenuItemSpriteExtra::create(buttonSprite(text, texture), this, menu_selector(NovaMenuPopup::onEntry));
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/Nova-Modd/Nova-Modd/build/bindings/bindings/Geode/binding/CCMenuItemSpriteExtra.hpp:33:35: note: candidate function not viable: no known conversion from 'nova::NovaMenuPopup *' to 'cocos2d::CCObject *' for 2nd argument
+   33 |     static CCMenuItemSpriteExtra* create(cocos2d::CCNode* sprite, cocos2d::CCObject* target, cocos2d::SEL_MenuHandler callback);
+      |                                   ^                               ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/Nova-Modd/Nova-Modd/build/bindings/bindings/Geode/binding/CCMenuItemSpriteExtra.hpp:42:35: note: candidate function not viable: requires 4 arguments, but 3 were provided
+   42 |     static CCMenuItemSpriteExtra* create(cocos2d::CCNode* sprite, cocos2d::CCNode* selectedSprite, cocos2d::CCObject* target, cocos2d::SEL_MenuHandler callback);
+      |                                   ^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/Nova-Modd/Nova-Modd/src/Menu.cpp:315:54: error: no member named 'show' in 'nova::NovaMenuPopup'
+  315 |     if (auto popup = NovaMenuPopup::create()) popup->show();
+      |                                               ~~~~~  ^
+14 errors generated.
+[27/34] Building CXX object CMakeFiles/NovaMenu.dir/geode-sdk-clone/entry.cpp.o
+[28/34] Building CXX object CMakeFiles/NovaMenu.dir/src/Macro.cpp.o
+[29/34] Building CXX object CMakeFiles/NovaMenu.dir/src/Hooks.cpp.o
+FAILED: [code=1] CMakeFiles/NovaMenu.dir/src/Hooks.cpp.o 
+/usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android23 --sysroot=/usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DARC_FEATURE_TIME=1 -DGEODE_COMP_GD_VERSION=22081 -DGEODE_GD_VERSION=2.2081 -DGEODE_GD_VERSION_STRING=\"2.2081\" -DGEODE_MOD_ID=\"george.nova-menu\" -DMAT_JSON_DYNAMIC=1 -DNovaMenu_EXPORTS -DPROJECT_NAME=NovaMenu -I/home/runner/work/Nova-Modd/Nova-Modd/build/geode-deps -I/home/runner/work/Nova-Modd/Nova-Modd/geode-sdk-clone/loader/include -I/home/runner/work/Nova-Modd/Nova-Modd/geode-sdk-clone/loader/include/Geode/cocos/include -I/home/runner/work/Nova-Modd/Nova-Modd/geode-sdk-clone/loader/include/Geode/cocos/extensions -I/home/runner/work/Nova-Modd/Nova-Modd/geode-sdk-clone/loader/include/Geode/fmod -isystem /home/runner/work/Nova-Modd/Nova-Modd/build/bindings/bindings -isystem /home/runner/work/Nova-Modd/Nova-Modd/build/_deps/bindings-src/bindings/include -isystem /home/runner/work/Nova-Modd/Nova-Modd/build/_deps/fmt-src/include -isystem /home/runner/work/Nova-Modd/Nova-Modd/build/_deps/tuliphook-src/include -isystem /home/runner/work/Nova-Modd/Nova-Modd/build/_deps/result-src/include -isystem /home/runner/work/Nova-Modd/Nova-Modd/build/_deps/json-src/include -isystem /home/runner/work/Nova-Modd/Nova-Modd/build/_deps/nontype_functional-src/include -isystem /home/runner/work/Nova-Modd/Nova-Modd/build/_deps/asp2-src/include -isystem /home/runner/work/Nova-Modd/Nova-Modd/build/_deps/arc-src/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O3 -DNDEBUG  -std=gnu++23 -flto=thin -fPIC -fvisibility=hidden -Werror=return-type -ffunction-sections -fdata-sections -Winvalid-pch -Xclang -include-pch -Xclang /home/runner/work/Nova-Modd/Nova-Modd/build/CMakeFiles/NovaMenu.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/runner/work/Nova-Modd/Nova-Modd/build/CMakeFiles/NovaMenu.dir/cmake_pch.hxx -MD -MT CMakeFiles/NovaMenu.dir/src/Hooks.cpp.o -MF CMakeFiles/NovaMenu.dir/src/Hooks.cpp.o.d -o CMakeFiles/NovaMenu.dir/src/Hooks.cpp.o -c /home/runner/work/Nova-Modd/Nova-Modd/src/Hooks.cpp
+In file included from /home/runner/work/Nova-Modd/Nova-Modd/src/Hooks.cpp:4:
+/home/runner/work/Nova-Modd/Nova-Modd/src/Menu.hpp:31:36: error: unknown template name 'Popup'
+   31 | class NovaMenuPopup final : public Popup<> {
+      |                                    ^
+/home/runner/work/Nova-Modd/Nova-Modd/src/Menu.hpp:34:18: error: only virtual member functions can be marked 'override'
+   34 |     bool setup() override;
+      |                  ^~~~~~~~
+/home/runner/work/Nova-Modd/Nova-Modd/src/Menu.hpp:36:36: error: only virtual member functions can be marked 'override'
+   36 |     void onClose(CCObject* sender) override;
+      |                                    ^~~~~~~~
+/home/runner/work/Nova-Modd/Nova-Modd/src/Menu.hpp:37:27: error: only virtual member functions can be marked 'override'
+   37 |     void keyBackClicked() override;
+      |                           ^~~~~~~~
+/home/runner/work/Nova-Modd/Nova-Modd/src/Hooks.cpp:178:44: error: too few arguments to function call, expected 3, have 1
+  178 |         GJBaseGameLayer::processCommands(dt);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   ^
+/home/runner/work/Nova-Modd/Nova-Modd/build/bindings/bindings/Geode/binding/GJBaseGameLayer.hpp:2390:10: note: 'processCommands' declared here
+ 2390 |     void processCommands(float dt, bool isHalfTick, bool isLastTick);
+      |          ^               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/Nova-Modd/Nova-Modd/src/Hooks.cpp:203:85: error: too few arguments to function call, expected 4, have 3
+  203 |         return CCKeyboardDispatcher::dispatchKeyboardMSG(key, isKeyDown, isKeyRepeat);
+      |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                            ^
+/home/runner/work/Nova-Modd/Nova-Modd/geode-sdk-clone/loader/include/Geode/cocos/extensions/GUI/CCControlExtension/../../../include/../robtop/keyboard_dispatcher/CCKeyboardDispatcher.h:26:7: note: 'dispatchKeyboardMSG' declared here
+   26 |         bool dispatchKeyboardMSG(enumKeyCodes key, bool isKeyDown, bool isKeyRepeat, double);
+      |              ^                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+6 errors generated.
+[30/34] Building CXX object bindings/CMakeFiles/GeodeBindings.dir/Unity/unity_1_cxx.cxx.o
+ninja: build stopped: subcommand failed.
 BUILD_EXIT=1
