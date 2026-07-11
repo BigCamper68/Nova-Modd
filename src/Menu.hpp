@@ -1,7 +1,7 @@
 #pragma once
 
 #include <Geode/Geode.hpp>
-#include <Geode/ui/GeodeUI.hpp>
+#include <Geode/ui/Popup.hpp>
 
 #include <functional>
 #include <string>
@@ -28,7 +28,7 @@ struct MenuEntry {
     int action = 0;
 };
 
-class NovaMenuPopup final : public Popup<> {
+class NovaMenuPopup final : public geode::Popup<> {
 public:
     static NovaMenuPopup* create();
     bool setup() override;
