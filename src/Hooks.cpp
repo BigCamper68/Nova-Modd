@@ -173,9 +173,9 @@ class $modify(NovaBaseGameLayer, GJBaseGameLayer) {
         macro.onInput(this, down, button, isPlayer1);
     }
 
-    void processCommands(float dt) {
+    void processCommands(float dt, bool isHalfTick, bool isLastTick) {
         MacroManager::get().tick(this, dt);
-        GJBaseGameLayer::processCommands(dt);
+        GJBaseGameLayer::processCommands(dt, isHalfTick, isLastTick);
     }
 };
 
@@ -191,7 +191,7 @@ class $modify(NovaGameLevel, GJGameLevel) {
 };
 
 class $modify(NovaKeyboardDispatcher, CCKeyboardDispatcher) {
-    bool dispatchKeyboardMSG(enumKeyCodes key, bool isKeyDown, bool isKeyRepeat) {
+    bool dispatchKeyboardMSG(enumKeyCodes key, bool isKeyDown, bool isKeyRepeat, double timestamp) {
         if (
             isKeyDown &&
             !isKeyRepeat &&
@@ -200,7 +200,7 @@ class $modify(NovaKeyboardDispatcher, CCKeyboardDispatcher) {
         ) {
             openNovaMenu();
         }
-        return CCKeyboardDispatcher::dispatchKeyboardMSG(key, isKeyDown, isKeyRepeat);
+        return CCKeyboardDispatcher::dispatchKeyboardMSG(key, isKeyDown, isKeyRepeat, timestamp);
     }
 };
 
